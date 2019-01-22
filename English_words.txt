@@ -1,0 +1,20 @@
+﻿anticipate 予測する、見込む
+English	英語
+Japan	日本
+baby	赤ちゃん
+baseball	野球
+child	子供
+children	子供たち
+chinese	中国人
+crucial	極めて重要な
+devise	考案する
+disturb	邪魔する、不安にさせる
+distinct はっきりと異なる、違った
+human	人間
+japanese	日本人、日本語
+naoya matsuda	まっつん
+read	読む
+sleep	寝る
+soccer	サッカー
+write	書く
+﻿China	中国
