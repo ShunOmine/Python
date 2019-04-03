@@ -10,6 +10,7 @@ fps = 20.0
 size = (640, 360)
 writer = cv2.VideoWriter('test.m4v', fmt, fps, size)
 
+
 while True:
     _, frame = cap.read() #動画を入力
 
@@ -19,7 +20,7 @@ while True:
 
     # 顔認識を実行 --- (*3)
     gray = cv2.cvtColor(frame, cv2.COLOR_BGR2GRAY)
-    face_list = cascade.detectMultiScale(gray, scaleFactor=1.1, minNeighbors=1, minSize=(150, 150))
+    face_list = cascade.detectMultiScale(gray, minSize=(150, 150))
 
     # 画像を縮小
     frame = cv2.resize(frame, size)
@@ -29,10 +30,11 @@ while True:
         print("can't find your face")
 
     # 認識した部分に印をつける
+    # 認識した部分にモザイクをかける
     for (x,y,w,h) in face_list:
         print("顔の座標=", x, y, w, h)
-        green = (0, 255, 0)
-        cv2.rectangle(frame, (x, y), (x+w, y+h), green, thickness=2)
+        red = (0, 0, 255)
+        frame = cv2.rectangle(frame, (x, y), (x+w, y+h), red, thickness=20)
 
     plt.show()
 
